@@ -1,0 +1,55 @@
+@import '~/assets/styles/configs.scss';
+
+html {
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  font-size: calc(((1vw + 1vw) / 10) + 8px);
+  scroll-behavior: smooth;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+}
+
+input,
+button {
+  background: transparent;
+  font-family: 'Work Sans', sans-serif;
+  outline: none;
+  user-select: none;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.origin {
+  background: $color_light;
+
+  &[data-theme="dark"] {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}

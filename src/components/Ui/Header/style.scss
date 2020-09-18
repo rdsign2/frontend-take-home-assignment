@@ -1,0 +1,17 @@
+@import '~/assets/styles/configs.scss';
+
+.Header {
+  align-items: center;
+  background-color: $color_light_soft;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem $padding_md 1.5rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  svg {
+    height: $logo_height;
+  }
+}

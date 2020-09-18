@@ -1,0 +1,8 @@
+@import '~/assets/styles/configs.scss';
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  height: calc((100% - #{$logo_height}) - 3.5rem);
+  justify-content: center;
+}
