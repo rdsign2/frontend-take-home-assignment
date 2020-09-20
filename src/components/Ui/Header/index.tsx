@@ -5,8 +5,14 @@ import './style.scss';
 
 const Header: React.FC = () => {
   const handleThemeMode = () => {
-    const themeMode = JSON.parse(window.localStorage.getItem('darkMode'));
-    localStorage.setItem('darkMode', `${!themeMode}`);
+    const themeMode = window.localStorage.getItem('theme');
+
+    const changeTheme = (theme: string) => {
+      document.getElementById('origin').setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    };
+
+    themeMode === 'light' ? changeTheme('dark') : changeTheme('light');
   };
 
   return (
@@ -14,7 +20,7 @@ const Header: React.FC = () => {
       <a href="/">
         <LogoOrigin color="#1d1e1f" />
       </a>
-      <button title="Change theme color" onClick={handleThemeMode}>
+      <button title="Change theme" onClick={handleThemeMode}>
         <DarkMode color="#657786" />
       </button>
     </header>

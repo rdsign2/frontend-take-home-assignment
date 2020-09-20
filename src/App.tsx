@@ -5,21 +5,18 @@ import './assets/styles/app.scss';
 
 const App: React.FunctionComponent = () => {
   React.useEffect(() => {
-    const themeMode = JSON.parse(window.localStorage.getItem('darkMode'));
+    const themeMode = window.localStorage.getItem('theme');
 
     const changeTheme = (theme: string) => {
       document.getElementById('origin').setAttribute('data-theme', theme);
     };
 
-    if (themeMode) {
-      changeTheme('dark');
-    } else {
-      changeTheme('light');
-    }
+    !themeMode
+      ? window.localStorage.setItem('theme', 'light')
+      : themeMode === 'dark'
+      ? changeTheme('dark')
+      : changeTheme('light');
 
-    // https://egghead.io/lessons/react-store-values-in-localstorage-with-the-react-useeffect-hook
-    // Esse vídeo explica direitinho como fazer. Vou precisar controlar o tema pela STORE, para que o useeffect escute as alterações
-    // Ver useselector e usedispatch
   }, []);
 
   return (
