@@ -133,3 +133,15 @@ input {
     flex-wrap: wrap;
   }
 }
+
+@media all and (min-width: 2200px) and (max-width: 2560px) and (orientation: landscape) {
+  html {
+    font-size: calc(((1vw + 1vh) / 12) + 10px);
+  }
+}
+
+@media all and (min-width: 2800px) and (max-width: 3840px) and (orientation: landscape) {
+  html {
+    font-size: calc(((1vw + 1vh) / 8) + 12px);
+  }
+}
