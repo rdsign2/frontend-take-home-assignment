@@ -18,12 +18,66 @@ body {
 *,
 *:before,
 *:after {
+  border: 0;
   box-sizing: border-box;
+  color: $color_dark_hard;
+  outline: none;
+  padding: 0;
   margin: 0;
 }
 
+* strong,
+small {
+  color: inherit;
+}
+
 a {
+  cursor: pointer;
   display: inline-block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2em;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  user-select: none;
+}
+
+li {
+  list-style: none;
 }
 
 input,
@@ -40,16 +94,42 @@ button {
 }
 
 button {
+  align-items: center;
   border: 0;
+  color: white;
   cursor: pointer;
+  display: flex;
+  font-size: 1.7rem;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.04em;
   margin: 0;
   padding: 0;
+  transition: transform $time_fast ease-in-out;
+  user-select: none;
+}
+
+input {
+  font-size: 1.9rem;
+  font-weight: 600;
 }
 
 .origin {
   background: $color_light;
 
   &[data-theme="dark"] {
-    filter: invert(1) hue-rotate(180deg);
+    filter: invert(1) hue-rotate(180deg) brightness(1.4) contrast(0.9);
+
+    .tp {
+      border: 0;
+      transition: all 0s ease-in;
+      filter: invert(0.9) hue-rotate(175deg) saturate(2)
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
   }
 }

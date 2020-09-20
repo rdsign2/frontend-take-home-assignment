@@ -1,0 +1,50 @@
+@import '~/assets/styles/configs.scss';
+
+.input {
+  display: flex;
+  flex-direction: column;
+
+  .innerHolder {
+    align-items: center;
+    border: $border;
+    border-radius: $border_radius_md;
+    display: flex;
+    height: 6rem;
+    margin-top: 0.5rem;
+    width: 100%;
+
+    .icon {
+      align-items: center;
+      background: $color_light;
+      border-right: $border;
+      color: $color_dark;
+      display: flex;
+      font-size: 2rem;
+      height: 100%;
+      justify-content: center;
+      text-align: center;
+      width: 7.5rem;
+    }
+
+    input {
+      background: transparent;
+      height: 100%;
+      letter-spacing: -0.01em;
+      padding: 0 1.5rem;
+      width: inherit;
+
+      &:focus {
+        box-shadow: inset 0 0 0.5vh rgba($color_primary_soft, 0.15);
+      }
+
+      &::-webkit-outer-spin-button {
+        margin: 0;
+        -webkit-appearance: none;
+      }
+      &::-webkit-inner-spin-button {
+        margin: 0;
+        -webkit-appearance: none;
+      }
+    }
+  }
+}

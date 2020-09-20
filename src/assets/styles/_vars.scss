@@ -1,6 +1,18 @@
+@import "./_colors";
+
 // STRUCTURAL
 $padding_md: 3rem;
-$border_radius: 0.2rem;
+$padding_lg: 4.5rem;
+$border: 0.1rem solid $color_light_hard;
+$border_radius_sm: 0.2rem;
+$border_radius_md: 0.4rem;
+$border_radius_lg: 0.8rem;
 
 // OBJECTS
 $logo_height: 3rem;
+
+// ANIMATIONS
+$time_fast: 0.2s;
+$time_moderate: 0.33s;
+$time_slow: 0.5s;
+$cubic: cubic-bezier(0.19, 1, 0.22, 1)

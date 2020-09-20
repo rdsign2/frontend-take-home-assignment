@@ -1,0 +1,83 @@
+@import '~/assets/styles/configs.scss';
+
+.SavingGoalPlanSimulator {
+  width: 66rem;
+
+  h3 {
+    color: $color_primary;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .goalPlanCalculator {
+    background-color: $color_light_soft;
+    border-radius: $border_radius_lg;
+    border: $border;
+    padding: $padding_lg;
+    margin-bottom: 4rem;
+
+    .heading {
+      margin-bottom: $padding_lg;
+
+      .IconHouse {
+        height: auto;
+        margin-bottom: 0.5rem;
+        width: 3.6rem;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .inputs {
+      justify-content: space-between;
+      width: 100%;
+
+      & .Input {
+        width: 47.5%;
+      }
+
+      & .DatePicker {
+        width: 47.5%;
+      }
+    }
+
+    .summary {
+      align-items: center;
+      border: $border;
+      border-radius: $border_radius_md;
+      box-shadow: 0 0.15rem 0.6rem rgba($color_dark_hard, 0.05);
+      margin: $padding_md 0;
+
+      :nth-child(1).row {
+        align-items: center;
+        justify-content: space-between;
+        padding: $padding_lg;
+      }
+
+      .label {
+        font-weight: 500;
+      }
+
+      .amount {
+        color: $color_primary_soft;
+        font-size: 4rem;
+        font-weight: 500;
+        letter-spacing: -0.04em;
+      }
+
+      :nth-child(2).row {
+        padding: 2rem $padding_lg;
+        background: $color_light;
+        border-radius: 0 0 $border_radius_md $border_radius_md;
+      }
+    }
+
+    .Button {
+      margin-bottom: 1rem;
+      width: 80%;
+    }
+  }
+}

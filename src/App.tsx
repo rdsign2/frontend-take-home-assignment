@@ -16,7 +16,6 @@ const App: React.FunctionComponent = () => {
       : themeMode === 'dark'
       ? changeTheme('dark')
       : changeTheme('light');
-
   }, []);
 
   return (

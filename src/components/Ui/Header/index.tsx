@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DarkMode from '../../SVGs/DarkMode';
+import IconTheme from '../../SVGs/Icons/IconTheme';
 import LogoOrigin from '../../SVGs/LogoOrigin';
 import './style.scss';
 
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         <LogoOrigin color="#1d1e1f" />
       </a>
       <button title="Change theme" onClick={handleThemeMode}>
-        <DarkMode color="#657786" />
+        <IconTheme color="#657786" />
       </button>
     </header>
   );
