@@ -4,8 +4,22 @@ import Input from '../../components/Ui/Input';
 import IconHouse from '../../components/SVGs/Icons/IconHouse';
 import './style.scss';
 
+const formatter = new Intl.NumberFormat('en-US', {
+  useGrouping: true,
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0
+});
+
 const SavingGoalPlanSimulator: React.FC = () => {
   const [value, setValue] = React.useState<number>(0);
+  const [installment, setInstallment] = React.useState<number>(0);
+
+  React.useEffect(() => {
+    setInstallment(value);
+    return () => {
+      setInstallment(0);
+    };
+  }, [value]);
 
   return (
     <section className="SavingGoalPlanSimulator">
@@ -28,7 +42,9 @@ const SavingGoalPlanSimulator: React.FC = () => {
               Monthly
               <span> amount</span>
             </p>
-            <h2 className="amount tp">$00000</h2>
+            <h2 className="amount tp">
+              $<strong>{formatter.format(installment)}</strong>
+            </h2>
           </div>
           <div className="row">
             <p>zzzzzzzzzzzzzzzzzzzzzzzzz</p>

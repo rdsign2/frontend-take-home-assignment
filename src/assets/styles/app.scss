@@ -3,7 +3,7 @@
 html {
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
-  font-size: calc(((1vw + 1vw) / 10) + 8px);
+  font-size: calc(((1vw + 1vh) / 14) + 8px);
   scroll-behavior: smooth;
   -moz-osx-font-smoothing: grayscale;
   -ms-text-size-adjust: 100%;
@@ -118,7 +118,7 @@ input {
   background: $color_light;
 
   &[data-theme="dark"] {
-    filter: invert(1) hue-rotate(180deg) brightness(1.4) contrast(0.9);
+    filter: invert(1) hue-rotate(180deg) brightness(1.5) contrast(0.85);
 
     .tp {
       border: 0;

@@ -18,8 +18,8 @@ const Input: React.FC<Props> = props => {
         <span className="icon">$</span>
         <CurrencyInput
           autoFocus
-          decimalSeparator="."
           maxLength="11"
+          precision="0"
           ref={refInput}
           selectAllOnFocus
           size="9"

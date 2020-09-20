@@ -1,12 +1,17 @@
 @import '~/assets/styles/configs.scss';
 
 .SavingGoalPlanSimulator {
-  width: 66rem;
+  width: 60rem;
 
   h3 {
     color: $color_primary;
+    font-weight: 400;
     padding: 4rem 0;
     text-align: center;
+
+    strong {
+      font-weight: bold;
+    }
   }
 
   .goalPlanCalculator {
@@ -64,8 +69,12 @@
       .amount {
         color: $color_primary_soft;
         font-size: 4rem;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: -0.04em;
+
+        strong {
+          font-weight: 500;
+        }
       }
 
       :nth-child(2).row {
