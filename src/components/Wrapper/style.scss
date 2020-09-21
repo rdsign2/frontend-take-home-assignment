@@ -6,3 +6,10 @@
   height: calc((100% - #{$logo_height}) - 3.5rem);
   justify-content: center;
 }
+
+@media all and (min-width: 260px) and (max-width: 600px) and (orientation: portrait) {
+  .wrapper {
+    height: calc(100vh - 6.5rem);
+    overflow-y: overlay;
+  }
+}

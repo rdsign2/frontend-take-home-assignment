@@ -18,7 +18,7 @@ const Input: React.FC<Props> = props => {
         <span className="icon">$</span>
         <CurrencyInput
           autoFocus
-          maxLength="11"
+          maxLength="10"
           precision="0"
           ref={refInput}
           selectAllOnFocus

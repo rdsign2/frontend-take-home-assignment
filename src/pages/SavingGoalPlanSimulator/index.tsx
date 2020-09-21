@@ -134,7 +134,7 @@ const SavingGoalPlanSimulator: React.FC = () => {
               <p>
                 You&apos;re planning
                 <strong>{summaryDetails.deposits}</strong>
-                to reach
+                to reach your
                 <strong>{summaryDetails.value}</strong>
                 goal by
                 <strong>{summaryDetails.when}</strong>

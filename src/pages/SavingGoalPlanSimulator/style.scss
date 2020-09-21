@@ -102,3 +102,71 @@
     }
   }
 }
+
+@media all and (min-width: 260px) and (max-width: 600px) and (orientation: portrait) {
+  .SavingGoalPlanSimulator {
+    align-self: flex-end;
+    height: 100%;
+    width: 100%;
+
+    .goalPlanCalculator {
+      border: 0;
+      border-radius: $border_radius_lg_mob $border_radius_lg_mob 0 0;
+      box-shadow: 0 0.6rem 2.4rem rgba($color_dark_hard, 0.2);
+      height: -webkit-fill-available;
+      // height: calc(100% - 10rem);
+      padding: $padding_lg_mob;
+      margin-bottom: 0;
+
+      .heading {
+        margin-bottom: $padding_md_mob;
+      }
+
+      .inputs {
+        & .Input {
+          width: 100%;
+          margin-bottom: $padding_md_mob;
+        }
+
+        & .DatePicker {
+          width: 100%;
+        }
+      }
+
+      .summary {
+        border-radius: $border_radius_md;
+        margin: $padding_md_mob 0;
+
+        :nth-child(1).row {
+          padding: $padding_md_mob;
+        }
+
+        .label {
+          span {
+            display: none;
+          }
+        }
+
+        .amount {
+          font-size: 3.2rem;
+        }
+
+        :nth-child(2).row {
+          padding: $padding_md_mob;
+          border-radius: 0 0 $border_radius_md $border_radius_md;
+        }
+
+        .details {
+          p {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .Button {
+        margin-bottom: $padding_lg_mob;
+        width: 100%;
+      }
+    }
+  }
+}

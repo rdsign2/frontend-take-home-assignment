@@ -48,3 +48,17 @@
     }
   }
 }
+
+@media all and (min-width: 260px) and (max-width: 600px) and (orientation: portrait) {
+
+  .input {
+    font-size: 1.8rem;
+
+    .innerHolder {
+      input {
+        font-size: 2.3rem;
+      }
+    }
+  }
+
+}

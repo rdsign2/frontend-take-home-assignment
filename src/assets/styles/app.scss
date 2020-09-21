@@ -134,14 +134,44 @@ input {
   }
 }
 
+// 4K
 @media all and (min-width: 2200px) and (max-width: 2560px) and (orientation: landscape) {
   html {
     font-size: calc(((1vw + 1vh) / 12) + 10px);
   }
 }
 
+// 2K
 @media all and (min-width: 2800px) and (max-width: 3840px) and (orientation: landscape) {
   html {
     font-size: calc(((1vw + 1vh) / 8) + 12px);
+  }
+}
+
+// tiny devices
+@media all and (min-width: 260px) and (max-width: 320px) {
+  html {
+    font-size: calc(((1vw + 1vh) / 20) + 7px);
+  }
+}
+
+// small devices
+@media all and (min-width: 321px) and (max-width: 380px) {
+  html {
+    font-size: calc(((1vw + 1vh) / 13) + 8px);
+  }
+}
+
+// medium devices
+@media all and (min-width: 381px) and (max-width: 600px) {
+  html {
+    font-size: calc(((1vw + 1vh) / 10) + 8px);
+  }
+}
+
+// large devices
+@media all and (min-width: 601px) and (max-width: 800px) {
+  html {
+    font-size: calc(((1vw + 1vh) / 9) + 8px);
   }
 }
