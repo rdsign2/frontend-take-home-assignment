@@ -1,4 +1,5 @@
 import * as React from 'react';
+import IconArrow from '../../SVGs/Icons/IconArrow';
 import './style.scss';
 
 interface Props {
@@ -74,7 +75,7 @@ const DatePicker: React.FC<Props> = props => {
           onClick={() => handleButton('previous')}
           onKeyDown={handleKeyPress}
         >
-          <img src={require('~/assets/icons/arrow.svg')} />
+          <IconArrow color="#657786" />
         </button>
         <button
           className="pickerDisplay"
@@ -94,7 +95,7 @@ const DatePicker: React.FC<Props> = props => {
           onClick={() => handleButton('next')}
           onKeyDown={handleKeyPress}
         >
-          <img src={require('~/assets/icons/arrow.svg')} />
+          <IconArrow color="#657786" />
         </button>
 
         {picker ? (
@@ -110,7 +111,7 @@ const DatePicker: React.FC<Props> = props => {
                 }
                 onClick={props.previousYear}
               >
-                <img src={require('~/assets/icons/arrow.svg')} />
+                <IconArrow color="#657786" />
               </button>
               <button
                 className="pickerDisplay"
@@ -119,7 +120,7 @@ const DatePicker: React.FC<Props> = props => {
                 <p> {props.stateYear} </p>
               </button>
               <button className="forward" onClick={props.nextYear}>
-                <img src={require('~/assets/icons/arrow.svg')} />
+                <IconArrow color="#657786" />
               </button>
             </div>
             <ul className="pickerMonths">{list}</ul>

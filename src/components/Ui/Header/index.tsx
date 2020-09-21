@@ -1,6 +1,7 @@
 import * as React from 'react';
+import Lottie from 'react-lottie';
 import IconTheme from '../../SVGs/Icons/IconTheme';
-import LogoOrigin from '../../SVGs/LogoOrigin';
+import * as logo from '../../../assets/animations/logo.json';
 import './style.scss';
 
 const Header: React.FC = () => {
@@ -15,10 +16,19 @@ const Header: React.FC = () => {
     themeMode === 'light' ? changeTheme('dark') : changeTheme('light');
   };
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: logo,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
   return (
     <header className="Header">
       <a href="/">
-        <LogoOrigin color="#1d1e1f" />
+        <Lottie options={defaultOptions} height={'3rem'} width={'9rem'} />
       </a>
       <button title="Change theme" onClick={handleThemeMode}>
         <IconTheme color="#657786" />
