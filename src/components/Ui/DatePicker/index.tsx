@@ -61,7 +61,7 @@ const DatePicker: React.FC<Props> = props => {
   return (
     <div className="DatePicker">
       <label>Reach goal by</label>
-      {/* DISPLAY */}
+
       <span className="innerHolder">
         <button
           className="back"
@@ -96,11 +96,20 @@ const DatePicker: React.FC<Props> = props => {
         >
           <img src={require('~/assets/icons/arrow.svg')} />
         </button>
-        {/* PICKER */}
+
         {picker ? (
           <div className="picker" onMouseLeave={() => handlePickDate(false)}>
             <div className="row">
-              <button className="back" onClick={props.previousYear}>
+              <button
+                className="back"
+                disabled={
+                  props.currentYear === props.stateYear &&
+                  props.minStart === props.stateMonth
+                    ? true
+                    : false
+                }
+                onClick={props.previousYear}
+              >
                 <img src={require('~/assets/icons/arrow.svg')} />
               </button>
               <button
