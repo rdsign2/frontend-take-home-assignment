@@ -13,3 +13,11 @@
     overflow-y: overlay;
   }
 }
+
+@media all and (min-height: 0px) and (max-height: 450px) and (orientation: landscape) {
+  .wrapper {
+    align-items: flex-start;
+    height: calc(100vh - 6.5rem);
+    overflow-y: overlay;
+  }
+}
