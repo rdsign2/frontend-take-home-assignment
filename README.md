@@ -1,7 +1,7 @@
 # About the task
 
 Brief video explaining the lovely made features:
-[Layout mockups](https://www.loom.com/share/b902dc2aabf747b4ae296305157a4e1f)
+[Looom video](https://www.loom.com/share/b902dc2aabf747b4ae296305157a4e1f)
 
 ### Extra features
 
