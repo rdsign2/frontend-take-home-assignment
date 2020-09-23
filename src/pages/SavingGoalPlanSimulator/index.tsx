@@ -6,71 +6,47 @@ import Input from '../../components/Ui/Input';
 import IconHouse from '../../components/SVGs/Icons/IconHouse';
 import './style.scss';
 
-const months = moment.months();
-const currentYear = new Date().getFullYear();
-const currentMonth = new Date().toLocaleString('en-US', { month: 'long' });
-const formatter = new Intl.NumberFormat('en-US', {
-  useGrouping: true,
-  minimumFractionDigits: 0,
-  maximumFractionDigits: 0
-});
-const minMonthGoalPeriod = 1;
-const minStartingMonthIndex = months.indexOf(currentMonth) + minMonthGoalPeriod;
-const minStartingMonth = months[minStartingMonthIndex];
-const disabledMonths = months.filter((e, index) => {
-  if (index < months.indexOf(minStartingMonth)) {
-    return e;
-  }
-});
+import * as date from './date';
 
 const SavingGoalPlanSimulator: React.FC = () => {
-  const [month, setMonth] = React.useState<string>(minStartingMonth);
-  const [year, setYear] = React.useState<number>(currentYear);
-  const [deposits, setDeposits] = React.useState<number>(minMonthGoalPeriod);
+  const [month, setMonth] = React.useState<string>(date.minStartingMonth);
+  const [year, setYear] = React.useState<number>(date.currentYear);
+  const [deposits, setDeposits] = React.useState<number>(
+    date.minMonthGoalPeriod
+  );
   const [value, setValue] = React.useState<number>(0);
   const [installment, setInstallment] = React.useState<number>(0);
 
   React.useEffect(() => {
     setDeposits(
-      moment([year, months.indexOf(month), 1]).diff(
-        moment([currentYear, months.indexOf(currentMonth), 1]),
+      moment([year, date.months.indexOf(month), 1]).diff(
+        moment([date.currentYear, date.months.indexOf(date.currentMonth), 1]),
         'months',
         true
       )
     );
     setInstallment(value / deposits);
     return () => {
-      setDeposits(minMonthGoalPeriod);
+      setDeposits(date.minMonthGoalPeriod);
       setInstallment(0);
     };
   }, [deposits, month, value, year]);
 
   const handleMonthChange = (action: 'prev' | 'next') => {
-    const currMonthIndex = months.indexOf(month);
-    if (action === 'next') {
-      month === 'December'
-        ? (setMonth('January'), setYear(year + 1))
-        : setMonth(months[currMonthIndex + 1]);
-    } else {
-      month === minStartingMonth && year === currentYear
-        ? null
-        : month === 'January'
-        ? (setMonth('December'), setYear(year - 1))
-        : setMonth(months[currMonthIndex - 1]);
-    }
+    const { newMonth, newYear } = date.changeDate(action, month, year);
+    setMonth(newMonth);
+    setYear(newYear);
   };
 
   const handlePickedDate = (pickedMonth: number) => {
-    const currMonthIndex = months.indexOf(currentMonth);
-    pickedMonth <= currMonthIndex && year === currentYear
-      ? null
-      : setMonth(months[pickedMonth]);
+    const value = date.pickDate(pickedMonth, year);
+    value ? setMonth(value) : null;
   };
 
   const summaryDetails = {
     empty: 'Insert total amount and choose a date.',
     deposits: ` ${deposits} ${deposits <= 1 ? 'deposit' : 'monthly deposits'} `,
-    value: ` $${formatter.format(value)} `,
+    value: ` $${date.formatter.format(value)} `,
     when: ` ${month} ${year}.`
   };
 
@@ -88,23 +64,23 @@ const SavingGoalPlanSimulator: React.FC = () => {
         <div className="inputs row">
           <Input valueSetter={e => setValue(e)} type="number" />
           <DatePicker
-            currentMonth={currentMonth}
-            currentYear={currentYear}
-            disableds={disabledMonths}
-            minStart={minStartingMonth}
-            months={months}
+            currentMonth={date.currentMonth}
+            currentYear={date.currentYear}
+            disableds={date.disabledMonths}
+            minStart={date.minStartingMonth}
+            months={date.months}
             nextMonth={() => handleMonthChange('next')}
             nextYear={() => setYear(year + 1)}
             pickedDate={(pickedMonth: number) => handlePickedDate(pickedMonth)}
             previousMonth={() => handleMonthChange('prev')}
             previousYear={() =>
-              setYear(year === currentYear ? currentYear : year - 1)
+              setYear(year === date.currentYear ? date.currentYear : year - 1)
             }
             stateMonth={month}
             stateYear={year}
             validateYear={() =>
-              months.indexOf(month) < minStartingMonthIndex &&
-              year === currentYear
+              date.months.indexOf(month) < date.minStartingMonthIndex &&
+              year === date.currentYear
                 ? setYear(year + 1)
                 : null
             }
@@ -117,7 +93,7 @@ const SavingGoalPlanSimulator: React.FC = () => {
               <span> amount</span>
             </p>
             <h2 className="amount tp">
-              $<strong>{formatter.format(installment)}</strong>
+              $<strong>{date.formatter.format(installment)}</strong>
             </h2>
           </div>
           <div className="details row">

@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Saving goal plan simulator snapshotShot 1`] = `
+Array [
+  <section
+    className="SavingGoalPlanSimulator"
+  >
+    <h3
+      className="tp"
+    >
+      Let's plan your 
+      <strong>
+        saving goal.
+      </strong>
+    </h3>
+    <div
+      className="goalPlanCalculator"
+    >
+      <div
+        className="heading"
+      >
+        <IconHouse
+          color="#657786"
+        />
+        <h1>
+          Buy a house
+        </h1>
+        <p>
+          Saving goal
+        </p>
+      </div>
+      <div
+        className="inputs row"
+      >
+        <Input
+          type="number"
+          valueSetter={[Function]}
+        />
+        <DatePicker
+          currentMonth="September"
+          currentYear={2020}
+          disableds={
+            Array [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+            ]
+          }
+          minStart="October"
+          months={
+            Array [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December",
+            ]
+          }
+          nextMonth={[Function]}
+          nextYear={[Function]}
+          pickedDate={[Function]}
+          previousMonth={[Function]}
+          previousYear={[Function]}
+          stateMonth="October"
+          stateYear={2020}
+          validateYear={[Function]}
+        />
+      </div>
+      <div
+        className="summary"
+      >
+        <div
+          className="row"
+        >
+          <p
+            className="label"
+          >
+            Monthly
+            <span>
+               amount
+            </span>
+          </p>
+          <h2
+            className="amount tp"
+          >
+            $
+            <strong>
+              0
+            </strong>
+          </h2>
+        </div>
+        <div
+          className="details row"
+        >
+          <p>
+            Insert total amount and choose a date.
+          </p>
+        </div>
+      </div>
+      <Button
+        enable={false}
+      />
+    </div>
+  </section>,
+]
+`;
