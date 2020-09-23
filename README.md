@@ -3,7 +3,7 @@
 Brief video explaining the lovely made features:
 [>>> Video <<<](https://drive.google.com/file/d/1zYPvLw-hRKgpiaZ-BvC6-iV0muY6RfAm/view)
 
-### Extra features
+### Extra features :rocket:
 
 * Dark mode toggle on header with a few lines of code
 * Responsive sizing dynamic html{ font-size } + rem on components
