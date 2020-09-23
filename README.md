@@ -1,4 +1,4 @@
-# About the task
+# About the task :purple_heart:
 
 Brief video explaining the lovely made features:
 [>>> Video <<<](https://drive.google.com/file/d/1zYPvLw-hRKgpiaZ-BvC6-iV0muY6RfAm/view)
@@ -15,6 +15,7 @@ Brief video explaining the lovely made features:
 Thanks for the opportunity. Have a nice week.
 
 #
+
 
 
 # Origin Frontend Take-Home Assignment
