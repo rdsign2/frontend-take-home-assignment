@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatePicker snapshotShot 1`] = `
+Array [
+  <button
+    className="Button tp"
+    disabled={false}
+  >
+    Confirm
+  </button>,
+]
+`;

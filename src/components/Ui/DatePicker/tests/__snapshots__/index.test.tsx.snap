@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatePicker snapshotShot 1`] = `
+Array [
+  <div
+    className="DatePicker"
+  >
+    <label>
+      Reach goal by
+    </label>
+    <span
+      className="innerHolder"
+    >
+      <button
+        className="back"
+        disabled={false}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <IconArrow
+          color="#657786"
+        />
+      </button>
+      <button
+        className="pickerDisplay"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <p>
+          August
+          <small>
+            <br />
+            2026
+          </small>
+        </p>
+      </button>
+      <button
+        className="forward"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <IconArrow
+          color="#657786"
+        />
+      </button>
+    </span>
+  </div>,
+]
+`;

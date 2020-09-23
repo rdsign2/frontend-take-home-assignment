@@ -1,3 +1,22 @@
+# About the task
+
+Brief video explaining the lovely made features:
+[Layout mockups](https://www.loom.com/share/b902dc2aabf747b4ae296305157a4e1f)
+
+### Extra features
+
+* Dark mode toggle on header with a few lines of code
+* Responsive sizing dynamic html{ font-size } + rem on components
+* Animated logo with after effects, json + lottie
+* Best experience for all medias with small amount of code
+* Picker dropdown
+* Tests
+
+Thanks for the opportunity. Have a nice week.
+
+#
+
+
 # Origin Frontend Take-Home Assignment
 
 Origin is a platform that helps our customers' employees put their financial lives on track.
@@ -17,7 +36,7 @@ When the users change the value of any of the inputs, the monthly deposit value 
 
 # Development Instructions
 
-### Evaluation 
+### Evaluation
 Be aware that Origin will mainly take into consideration the following evaluation criteria:
 * How close your page is to the mockups, both on mobile & desktop;
 * How clean and organized your code is;

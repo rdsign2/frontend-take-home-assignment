@@ -3,9 +3,13 @@ import { shallow } from 'enzyme';
 import App from '../src/App';
 
 describe('App', () => {
-  it('renders', () => {
-    const component = shallow(<App />);
+  const component = shallow(<App />);
 
+  it('renders', () => {
     expect(component.exists()).toEqual(true);
+  });
+
+  it('html structure must match snapshot', () => {
+    expect(component.getElements()).toMatchSnapshot();
   });
 });
