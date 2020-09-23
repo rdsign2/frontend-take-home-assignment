@@ -1,7 +1,7 @@
 # About the task
 
 Brief video explaining the lovely made features:
-[Loooooooooom video](https://www.loom.com/share/b902dc2aabf747b4ae296305157a4e1f)
+[>>> Video <<<](https://drive.google.com/file/d/1zYPvLw-hRKgpiaZ-BvC6-iV0muY6RfAm/view)
 
 ### Extra features
 
